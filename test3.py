@@ -24,3 +24,82 @@ print('------')
 print(a.add_(b))
 print('------')
 print(a)
+
+
+# 减法的几种形式
+print(a-b)
+print(a.sub(b))
+print(torch.sub(a, b))
+print('------')
+print(a.sub_(b))
+print('------')
+print(a)
+
+
+# 乘法 mul
+print("========")
+print(a * b)
+print(torch.mul(a,b))
+print(a.mul(b))
+print(a.mul_(b))
+
+
+# 除法 div
+
+print("====div======")
+print(a/b)
+print(torch.div(a, b))
+print(a.div(b))
+print(a.div_(b))
+
+
+# matmul
+a = torch.ones(2, 1)
+print(a)
+b = torch.ones(1, 2)
+print(b)
+print(a @ b)
+print(a.matmul(b))
+print(torch.matmul(a, b))
+print(torch.mm(a, b))
+print(a.mm(b))
+
+
+## 高维tensor
+
+a = torch.ones(1, 2, 3, 4)
+b = torch.ones(1, 2, 4, 3)
+print(a.matmul(b))
+print(a.matmul(b).shape)
+
+# 指数运算
+a = torch.tensor([1, 2])
+print(torch.pow(a, 3))
+print(a.pow(3))
+print(a**3)
+print(a.pow_(3))
+
+
+# exp
+a = torch.tensor([1, 2], dtype=torch.float32)
+print(a.type())
+print(torch.exp(a))
+print(torch.exp_(a))
+print(a.exp())
+print(a.exp_())
+
+
+# 对数
+a = torch.tensor([10, 2], dtype=torch.float32)
+print(torch.log(a))
+print(torch.log_(a))
+print(a.log())
+print(a.log_())
+
+
+# sqart
+a = torch.tensor([10, 2], dtype=torch.float32)
+print(torch.sqrt(a))
+print(torch.sqrt_(a))
+print(a.sqrt())
+print(a.sqrt_())
